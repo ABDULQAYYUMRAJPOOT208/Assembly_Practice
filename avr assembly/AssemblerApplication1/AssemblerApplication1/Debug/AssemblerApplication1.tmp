@@ -1,0 +1,39 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>E:\Installs\microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\delay_Macro.inc</FILE>
+  <FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\UART.inc</FILE>
+  <FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\1602_LCD_Macros.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\Debug\AssemblerApplication1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AssemblerApplication1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AssemblerApplication1.map</FILE>
+  <FILE>AssemblerApplication1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <lcd_int><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>62</LINE></lcd_int>
+  <main><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>31</LINE></main>
+  <countdown><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>40</LINE></countdown>
+  <lcd_clr><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>82</LINE></lcd_clr>
+  <count_loop><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>44</LINE></count_loop>
+  <lcd_set_cursor><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>88</LINE></lcd_set_cursor>
+  <lcd_print_number><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>93</LINE></lcd_print_number>
+  <lcd_command><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>75</LINE></lcd_command>
+  <lcd_data><FILE>D:\Third Semester\coal\avr assembly\AssemblerApplication1\AssemblerApplication1\main.asm</FILE><LINE>98</LINE></lcd_data>
+ </LABELS>
+</ASSEMBLER_INFO>

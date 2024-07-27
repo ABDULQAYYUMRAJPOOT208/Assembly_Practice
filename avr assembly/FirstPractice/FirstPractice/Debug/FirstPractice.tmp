@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>E:\Installs\microchip studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\delay_Macro.inc</FILE>
+  <FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\UART.inc</FILE>
+  <FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\1602_LCD_Macros.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\Debug\FirstPractice.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>FirstPractice.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>FirstPractice.map</FILE>
+  <FILE>FirstPractice.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <name><FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm</FILE><LINE>92</LINE></name>
+  <loop><FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm</FILE><LINE>23</LINE></loop>
+  <len1><FILE>D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm</FILE><LINE>93</LINE></len1>
+ </LABELS>
+</ASSEMBLER_INFO>

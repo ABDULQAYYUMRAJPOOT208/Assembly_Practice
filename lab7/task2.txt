@@ -1,0 +1,124 @@
+Include irvine32.inc
+.data
+	str1 BYTE 20 DUP (?)
+	str2 BYTE 20 DUP (?)
+	msg BYTE "Enter a String: ",0
+	rtn_val1 BYTE ?		; it will hold 'h' returned from first search
+	rtn_val2 BYTE ?		; it will hold 'R' returned from second search
+	msg1 BYTE "Sum of DL and DH is greater than 25: ",0
+	msg2 BYTE "Stuck in infinite loop",0
+.code
+main proc
+	; get a string from user
+	mov EDX, offset msg
+	call WriteString
+	mov EDX, offset str1
+	mov ECX, sizeof str1
+	call ReadString
+
+	;search 'h' in the string str1
+	mov ECX, lengthof str1-1
+	mov EDX, offset str1
+	mov BL, 'h'
+	call arrayFind
+	mov rtn_val1,DL		; backup the rerutned value from DL to rtn_val1
+	
+	
+	; get another string from user
+	mov EDX, offset msg
+	call WriteString
+	mov EDX, offset str2
+	mov ECX, sizeof str2
+	call ReadString
+
+	; convert str2 to uppercase
+	mov ECX, lengthof str2-1
+	mov ESI,0
+	L1:
+		mov AL, str2[esi]
+		AND AL, 11011111b
+		mov str2[esi], AL
+		inc esi
+	Loop L1
+
+	; find 'R' in str2
+	mov ECX, lengthof str2-1
+	mov EDX, offset str2
+	mov BL, 'R'
+	call arrayFind
+	mov rtn_val2,DH		; backup the rerutned value from DH to rtn_val2
+
+
+	mov DL,rtn_val1
+	mov DH,rtn_val2
+	add DL,DH	; take sum of DL and DH
+	CMP DL,25	; compare sum with 25
+	JA close	; if sum is greater than 25 then exit the program
+	
+	; otherwise stuck the program in infinite loop
+	mov EDX, offset msg2
+	call WriteString
+	Top:
+	JMP TOP
+
+	close:
+		mov EDX, offset msg1
+		call WriteString
+		movzx EAX, DL
+		call WriteInt
+		call CRLF
+	exit
+main endp
+
+
+;-------------------------------------------------
+; Description: This procedure find any given
+;              character from a string
+; Receives: The lengthof of string in ECX register,
+;			the offset of string in EDX register, 
+;			the character to find in BL register
+; Returns: found character in DL or DH register
+;-------------------------------------------------
+arrayFind PROC
+
+	CMP BL,'h'
+	JE search_h
+	CMP BL,'R'
+	JE search_R
+	ret
+
+search_h:
+	; searching 'h' in String
+	mov ESI,0
+	L1:
+		mov AL, [EDX+ESI]
+		CMP AL,'h'
+		JNE notFound_h	; exit if 'h' not found
+		mov DL,AL		; if found 'h' then return it in DL
+		JMP close
+		notFound_h:
+		inc esi
+	Loop L1
+
+	mov DL,0		; return 0 in DL if 'h' not found
+
+search_R:
+	; searching 'R' in String
+	mov ESI,0
+	L2:
+		mov AL, [EDX+ESI]
+		CMP AL,'R'
+		JNE notFound_R	; exit if 'R' not found
+		mov DH,AL		; if found 'R' then return it in DH
+		JMP close
+		notFound_R:
+		inc esi
+	Loop L2
+
+	mov DH,0		; return 0 in DH if 'R' not found
+	
+	close:
+	ret
+arrayFind ENDP
+
+end main

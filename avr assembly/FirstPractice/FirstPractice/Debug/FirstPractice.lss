@@ -1,0 +1,8 @@
+
+AVRASM ver. 2.2.8  D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm Fri Jan 05 11:33:36 2024
+
+[builtin](2): Including file 'E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
+D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm(1): Including file 'E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc'
+[builtin](2): Including file 'E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
+D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm(1): Including file 'E:/Installs\microchip studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc'
+D:\Third Semester\coal\avr assembly\FirstPractice\FirstPractice\main.asm(81): error: Overlap in .cseg: addr=0x3e conflicts with 0x2a:0x51
